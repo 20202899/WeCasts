@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/motion_base"
+    app:layoutDescription="@xml/content_main_scene"
+    tools:context=".presentation.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:theme="@style/Theme.WeCasts.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_scrollFlags="enterAlways|scroll"
+            android:id="@+id/toolbar"
+            app:popupTheme="@style/Theme.WeCasts.PopupOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_gravity="bottom"
+            style="@style/TabsAppbar"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@null"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_main" />
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/player"-->
+<!--        app:layout_constraintCircleRadius="@dimen/fab_margin"-->
+<!--        app:cardElevation="8dp"-->
+<!--        android:background="?attr/colorPrimaryVariant"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:layout_width="0dp" />-->
+
+<!--    <com.google.android.material.imageview.ShapeableImageView-->
+<!--        android:id="@+id/image"-->
+<!--        android:elevation="10dp"-->
+<!--        app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.MediumComponent"-->
+<!--        android:src="@drawable/images"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/player"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginStart="@dimen/fab_margin"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/player"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"/>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_play"-->
+<!--        app:elevation="10dp"-->
+<!--        android:src="@drawable/ic_baseline_play_arrow_24"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/player"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/player"-->
+<!--        app:fabCustomSize="40dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:contentDescription="@null" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
